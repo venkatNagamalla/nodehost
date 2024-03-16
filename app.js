@@ -13,7 +13,7 @@ const initializeDbAndServer = async() => {
             filename: dbPath,
             driver: sqlite3.Database
         })
-        app.listen(3004,()=>{
+        app.listen(process.env.PORT || 3004,()=>{
             console.log("app starting")
         })
     }
